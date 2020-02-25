@@ -17,6 +17,7 @@ defmodule KioskPhxWeb.Router do
     pipe_through :browser
 
     get "/", PageController, :index
+    live "/rainbow", RainbowLive
   end
 
   # Other scopes may use custom stacks.
