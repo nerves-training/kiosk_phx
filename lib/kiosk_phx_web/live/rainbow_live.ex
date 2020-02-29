@@ -3,13 +3,13 @@ defmodule KioskPhxWeb.RainbowLive do
   use Phoenix.HTML
 
   @fps 30
-  @inner_window_width 800
+  @inner_window_width 700
 
   def render(assigns) do
     ~L"""
     <h3>Framerate at <%= @fps %>FPS</h3>
     <form phx-change="update_fps">
-      <input type="range" min="1" max="60" value="<%= @fps %>" name="fps"/>
+      <input type="range" min="1" max="40" value="<%= @fps %>" name="fps" class="slider" />
     </form>
     <div class="animated-sin-wave" phx-click="switch" style="background: <%= @bg %>;">
       <%= for bar <- @bars do %>

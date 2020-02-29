@@ -18,6 +18,7 @@ defmodule KioskPhxWeb.Router do
 
     get "/", PageController, :index
     live "/rainbow", RainbowLive
+    live "/brightness", BrightnessLive
   end
 
   # Other scopes may use custom stacks.
